@@ -1,4 +1,5 @@
 import express, {Express} from "express"
+import cors from "cors"
 import emailRoute from "../routes/sendEmail.route"
 
 export class Server {
@@ -13,6 +14,7 @@ export class Server {
 
     middlewares(): void {
         this.app.use(express.json())
+        this.app.use(cors())
     }
 
     route(): void {
