@@ -17,8 +17,8 @@ const transporter = nodemailer.createTransport({
     from: "portfoliomychaliczka@gmail.com"
 });
 
-export const sendEmail = async (message: string, from: string) => {
-                                                           // : Promise:<void>
+export const sendEmail = async (message: string, from: string): Promise<void> => {
+                                                            
     const mailOptions = {
         from: '"Portfolio" portfoliomychaliczka@gmail.com',
         to: "facundomychaliczka@gmail.com",
